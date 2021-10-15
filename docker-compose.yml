@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  server:
+    image: php:8.0-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./apache2.conf:/etc/apache2/apache2.conf
+      - ./html/:/var/www/html/
+    container_name: php-apache
